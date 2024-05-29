@@ -58,8 +58,8 @@ export default function Home() {
           id="footer-shadow"
         />
         <div className="flex justify-between">
-          <div className="flex flex-col gap-y-4 items-center ">
-            <div className="font-light">Get in touch:</div>
+          <div className="flex flex-col gap-y-4 items-center">
+            <div className="text-3xl font-bold">Get in touch</div>
             <ul className="list-none flex gap-3">
               <EmailIcon />
               <InstagramIcon />
