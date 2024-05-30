@@ -66,7 +66,7 @@ export default function Home() {
               <AnimatedRowSmall text="Last Set is not merely a collection of songs" />
               <AnimatedRowSmall text="but a journey through soundscapes that connect listeners" />
               <AnimatedRowSmall text="to a higher sense of aesthetic and emotional clarity." />
-              <AnimatedRowSmall text="Through every note, Last Set engages in a rebellious" />
+              <AnimatedRowSmall text="Through every note, Last Set engages in a" />
               <AnimatedRowSmall text="rebellious act of beauty, crafting melodies" />
               <AnimatedRowSmall text="that whisper of the hidden marvels of life." />
             </p>

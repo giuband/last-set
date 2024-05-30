@@ -1,4 +1,4 @@
-export const EMAIL_ADDRESS = "example@example.com" as const;
+export const EMAIL_ADDRESS = "info@lastsetmusic.com" as const;
 export const EMAIL_ADDRESS_HREF = `mailto:${EMAIL_ADDRESS}` as const;
 
 export const SOUNDCLOUD_HREF = "//soundcloud.com/lastset" as const;
