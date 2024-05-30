@@ -10,7 +10,7 @@ const manrope = Manrope({ subsets: ["latin"], weight: ["300", "700"] });
 
 export const metadata: Metadata = {
   title: "Last Set Homepage",
-  description: "Last Set is an house music producer based in Barcelona, Spain.",
+  description: "Last Set is a house music producer based in Barcelona, Spain.",
 };
 
 export default function RootLayout({

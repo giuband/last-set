@@ -5,6 +5,7 @@ import {
   EmailIcon,
   InstagramIcon,
   NavLink,
+  ResidentAdvisorIcon,
   SoundCloudIcon,
   VideoPlayer,
 } from "./components";
@@ -24,6 +25,7 @@ export default function Home() {
           <ul className="hidden list-none md:flex gap-3">
             <SoundCloudIcon />
             <InstagramIcon />
+            <ResidentAdvisorIcon />
           </ul>
         </nav>
 
@@ -93,6 +95,11 @@ export default function Home() {
             >
               {EMAIL_ADDRESS}
             </a>
+            <ul className=" list-none flex items-center gap-2 md:hidden">
+              <SoundCloudIcon />
+              <InstagramIcon />
+              <ResidentAdvisorIcon />
+            </ul>
           </div>
         </div>
       </footer>

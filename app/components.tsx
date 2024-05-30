@@ -5,22 +5,29 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   EMAIL_ADDRESS_HREF,
   INSTAGRAM_HREF,
+  RESIDENT_ADVISOR_HREF,
   SOUNDCLOUD_HREF,
 } from "./constants";
+import { RaIcon } from "./external-icons";
 
 function HoverableIcon({
-  icon,
   href,
   title,
+  ...iconProps
 }: {
-  icon: IconDefinition;
   href: string;
   title: string;
-}) {
+} & ({ icon: IconDefinition } | { externalIcon: React.ReactNode })) {
+  let renderedIcon;
+  if ("icon" in iconProps) {
+    renderedIcon = <FontAwesomeIcon size="2x" icon={iconProps.icon} />;
+  } else if ("externalIcon" in iconProps) {
+    renderedIcon = iconProps.externalIcon;
+  }
   return (
     <li className="opacity-60 transition-opacity hover:opacity-100">
       <a href={href} target="_blank" rel="noopener" title={title}>
-        <FontAwesomeIcon size="2x" icon={icon} />
+        {renderedIcon}
       </a>
     </li>
   );
@@ -47,6 +54,14 @@ export const EmailIcon = () => (
     icon={faEnvelope}
     href={EMAIL_ADDRESS_HREF}
     title="Send an email to Last Set"
+  />
+);
+
+export const ResidentAdvisorIcon = () => (
+  <HoverableIcon
+    href={RESIDENT_ADVISOR_HREF}
+    externalIcon={<RaIcon />}
+    title="Upcoming gigs of Last Set"
   />
 );
 
