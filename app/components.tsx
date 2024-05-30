@@ -95,7 +95,7 @@ export function TreeLink({
     renderedIcon = iconProps.externalIcon;
   }
   return (
-    <li className=" bg-black shadow-sm shadow-black relative before:absolute before:top-0 before:right-0 before:left-0 before:bottom-0 before:pointer-events-none before:bg-gray-800 before:opacity-0 hover:before:opacity-100 before:transition-opacity before:z-0">
+    <li className=" bg-black shadow-sm shadow-black border-white rounded-sm border-2 relative before:absolute before:top-0 before:right-0 before:left-0 before:bottom-0 before:pointer-events-none before:bg-gray-800 before:opacity-0 hover:before:opacity-100 before:transition-opacity before:z-0">
       <a
         href={href}
         target="_blank"
@@ -109,5 +109,22 @@ export function TreeLink({
         </div>
       </a>
     </li>
+  );
+}
+
+export function VideoPlayer() {
+  return (
+    <video
+      loop
+      width={500}
+      height={500}
+      autoPlay
+      playsInline
+      muted
+      className="absolute top-0 left-0 right-0 bottom-0 pointer-events-none -z-10 h-full w-full object-cover opacity-0 animate-fade-in-video mix-blend-hard-light"
+    >
+      <source src="https://axlmssb8p4yep5aa.public.blob.vercel-storage.com/bg-tNKZxaV4k1jPMTWYzmPX1b7kterqa9.mp4" />
+      <source src="https://axlmssb8p4yep5aa.public.blob.vercel-storage.com/bg-XJLTzaKbdIEj35Nk7vNOYV7PyELgy1.webm" />
+    </video>
   );
 }

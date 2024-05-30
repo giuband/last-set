@@ -1,5 +1,5 @@
 import { faInstagram, faSoundcloud } from "@fortawesome/free-brands-svg-icons";
-import { TreeLink } from "../components";
+import { TreeLink, VideoPlayer } from "../components";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import {
@@ -14,7 +14,8 @@ const HOMEPAGE_URL = "/";
 
 export default function Links() {
   return (
-    <main className="flex items-center justify-between min-h-screen flex-col p-24 before:absolute before:-z-10 before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-cover before:bg-hero-pattern font-light z-0 before:animate-hue-rotate animate-grayscale overflow-hidden">
+    <main className="flex items-center justify-between min-h-screen flex-col p-24 before:absolute before:-z-10 before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-cover before:bg-hero-pattern font-light z-0 before:animate-hue-rotate animate-grayscale overflow-hidden before:pointer-events-none">
+      <VideoPlayer />
       <header className="flex flex-col gap-3 items-center">
         <a
           href={HOMEPAGE_URL}

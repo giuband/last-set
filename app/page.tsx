@@ -5,14 +5,16 @@ import {
   InstagramIcon,
   NavLink,
   SoundCloudIcon,
+  VideoPlayer,
 } from "./components";
+import { EMAIL_ADDRESS, EMAIL_ADDRESS_HREF } from "./constants";
 
 export default function Home() {
   return (
     <>
-      <main className="flex sticky top-0 min-h-screen flex-col items-center justify-between p-24 before:absolute before:-z-10 before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-cover before:bg-hero-pattern font-light z-0 before:animate-hue-rotate animate-grayscale overflow-hidden">
-        <video className="absolute top-0 left-0 right-0 bottom-0 pointer-events-none z-0 h-full w-full" />
-        <nav className="flex z-10 w-full max-w-5xl items-center justify-between flex-col gap-y-2 md:flex-row md:gap-y-0">
+      <main className="flex sticky top-0 min-h-screen flex-col items-center justify-between p-24 before:absolute before:-z-10 before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-cover before:bg-hero-pattern font-light z-0 before:animate-hue-rotate animate-grayscale overflow-hidden before:pointer-events-none">
+        <VideoPlayer />
+        <nav className="flex relative z-10 w-full max-w-5xl items-center justify-between flex-col gap-y-2 md:flex-row md:gap-y-0">
           <h1 className="font-bold text-2xl">L[ST]</h1>
           <div className="gap-4 flex">
             <NavLink link="#" label="About" />
@@ -58,13 +60,17 @@ export default function Home() {
           id="footer-shadow"
         />
         <div className="flex justify-between">
-          <div className="flex flex-col gap-y-4 items-center">
+          <div className="flex flex-col gap-y-2 items-center">
             <div className="text-3xl font-bold">Get in touch</div>
-            <ul className="list-none flex gap-3">
-              <EmailIcon />
-              <InstagramIcon />
-              <SoundCloudIcon />
-            </ul>
+            <a
+              href={EMAIL_ADDRESS_HREF}
+              target="_blank"
+              rel="noopener"
+              title={"Send an email to Last Set"}
+              className="flex relative px-4 py-3 text-white w-full z-10 underline underline-offset-1"
+            >
+              {EMAIL_ADDRESS}
+            </a>
           </div>
         </div>
       </footer>

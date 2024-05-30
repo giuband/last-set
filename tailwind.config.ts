@@ -38,12 +38,17 @@ const config: Config = {
           "0%": { opacity: "0" },
           "100%": { opacity: "1" },
         },
+        "fade-in-video": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
       },
       animation: {
         "hue-rotate":
-          "hue-rotate 10s ease-in-out infinite, transform 30s ease-in-out infinite",
-        grayscale: "grayscale 20s ease-in-out infinite",
+          "hue-rotate 10s 2s ease-in-out infinite, transform 30s ease-in-out infinite",
+        grayscale: "grayscale 20s 2s ease-in-out infinite",
         "fade-in": "fade-in 1s 2s ease-in-out forwards",
+        "fade-in-video": "fade-in-video 3s 3s linear forwards",
       },
     },
   },
