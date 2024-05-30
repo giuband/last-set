@@ -14,7 +14,7 @@ const HOMEPAGE_URL = "/";
 
 export default function Links() {
   return (
-    <main className="flex items-center justify-between min-h-screen flex-col p-24 before:absolute before:-z-10 before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-cover before:bg-hero-pattern font-light z-0 before:animate-hue-rotate animate-grayscale overflow-hidden before:pointer-events-none">
+    <main className="flex items-center justify-between min-h-screen flex-col p-12 sm:p-24 overflow-hidden sm:overflow-auto before:absolute before:-z-10 before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-cover before:bg-hero-pattern font-light z-0 before:animate-hue-rotate animate-grayscale before:pointer-events-none">
       <VideoPlayer />
       <header className="flex flex-col gap-3 items-center">
         <a
