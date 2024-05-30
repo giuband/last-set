@@ -1,6 +1,7 @@
 import { Scripts } from "./scripts";
 import {
   AnimatedRow,
+  AnimatedRowSmall,
   EmailIcon,
   InstagramIcon,
   NavLink,
@@ -28,7 +29,7 @@ export default function Home() {
 
         <section className="relative z-[-1] flex grow items-center" id="about">
           <div className="flex flex-col gap-3 text-center text-sm sm:text-base md:text-lg lg:text-xl">
-            <p>
+            <p className="hidden sm:block">
               <AnimatedRow
                 text="In a world often overshadowed by dystopian narratives and
               wandering emotions,"
@@ -42,17 +43,38 @@ export default function Home() {
               <AnimatedRow text="weaving gentle stories that uplift and inspire. His compositions resonate with the" />
               <AnimatedRow text="soul, aiming to foster wellbeing and reveal the unseen wonders within everyday reality." />
             </p>
-            <p>
+            <p className="hidden sm:block">
               <AnimatedRow text="Last Set is not merely a collection of songs but a journey through" />
               <AnimatedRow text="soundscapes that connect listeners to a higher sense of aesthetic and" />
               <AnimatedRow text="emotional clarity. Through every note, Last Set engages in a rebellious" />
               <AnimatedRow text="act of beauty, crafting melodies that whisper of the hidden marvels of life." />
             </p>
+
+            <p className="sm:hidden">
+              <AnimatedRowSmall text="In a world often overshadowed by dystopian narratives and" />
+              <AnimatedRowSmall text="wandering emotions, Barcelona-based artist Giuseppe" />
+              <AnimatedRowSmall text="Bandiera offers a different path with Last Set." />
+              <AnimatedRowSmall text="This multifaceted project celebrates the euphoria found" />
+              <AnimatedRowSmall text="in the contemplation and realisation of intricate beauty." />
+              <AnimatedRowSmall text="Giuseppe's music seeks to transcend the ordinary," />
+              <AnimatedRowSmall text="weaving gentle stories that uplift and inspire." />
+              <AnimatedRowSmall text="His compositions resonate with the soul aiming to" />
+              <AnimatedRowSmall text="foster wellbeing and reveal the unseen wonders" />
+              <AnimatedRowSmall text="within everyday reality." />
+            </p>
+            <p className="sm:hidden">
+              <AnimatedRowSmall text="Last Set is not merely a collection of songs" />
+              <AnimatedRowSmall text="but a journey through soundscapes that connect listeners" />
+              <AnimatedRowSmall text="to a higher sense of aesthetic and emotional clarity." />
+              <AnimatedRowSmall text="Through every note, Last Set engages in a rebellious" />
+              <AnimatedRowSmall text="rebellious act of beauty, crafting melodies" />
+              <AnimatedRowSmall text="that whisper of the hidden marvels of life." />
+            </p>
           </div>
         </section>
       </main>
       <footer
-        className="relative z-10 bg-black text-white p-36 h-96 before:absolute before:-z-10 before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-cover before:bg-footer before:opacity-60"
+        className="relative flex items-center justify-center sm:justify-between sm:pl-20 z-10 bg-black text-white h-96 before:absolute before:-z-10 before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-cover before:bg-footer before:opacity-60"
         id="contact"
       >
         <div

@@ -20,15 +20,21 @@ const onScroll = () => {
 };
 
 const animateRows = () => {
+  const animateList = (list: Element[]) => {
+    list.forEach((el, index) => {
+      const accelerationFactor = (list.length - index * 0.5) / list.length;
+      const animationDelay = 300 * (index + 1) * accelerationFactor;
+      (el as HTMLSpanElement).style.animationDelay = `${animationDelay}ms`;
+    });
+  };
   const animatedRowsFound = Array.from(
     document.querySelectorAll("[data-animated-row]")
   );
-  animatedRowsFound.forEach((el, index) => {
-    const accelerationFactor =
-      (animatedRowsFound.length - index * 0.5) / animatedRowsFound.length;
-    const animationDelay = 300 * (index + 1) * accelerationFactor;
-    (el as HTMLSpanElement).style.animationDelay = `${animationDelay}ms`;
-  });
+  const animatedRowsSmallFound = Array.from(
+    document.querySelectorAll("[data-animated-row-sm]")
+  );
+  animateList(animatedRowsFound);
+  animateList(animatedRowsSmallFound);
 };
 
 export function Scripts() {

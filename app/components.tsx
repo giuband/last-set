@@ -68,6 +68,15 @@ export const AnimatedRow = ({ text }: { text: string }) => (
   </span>
 );
 
+export const AnimatedRowSmall = ({ text }: { text: string }) => (
+  <span
+    className="block animation-delay-1 animate-fade-in opacity-0 text-nowrap"
+    data-animated-row-sm="true"
+  >
+    {text}
+  </span>
+);
+
 interface TreeLinkPropsBase {
   href: string;
   label: string;
