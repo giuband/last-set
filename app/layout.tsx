@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Manrope } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { config } from "@fortawesome/fontawesome-svg-core";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import "./globals.css";
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className={manrope.className}>
         {children}
         <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
