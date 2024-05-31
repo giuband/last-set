@@ -25,7 +25,7 @@ export default function Links() {
         >
           <div className=" border-2 border-white rounded-full w-24 h-24 bg-footer bg-cover bg-right" />
         </a>
-        <h1 className="font-bold text-4xl ">L[ST]</h1>
+        <h1 className="font-bold text-4xl text-gray-900">L[ST]</h1>
       </header>
       <ul className="flex list-none flex-col gap-4 items-stretch mt-4">
         <TreeLink

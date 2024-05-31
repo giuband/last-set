@@ -14,7 +14,7 @@ import { EMAIL_ADDRESS, EMAIL_ADDRESS_HREF } from "./constants";
 export default function Home() {
   return (
     <>
-      <main className="flex sticky top-0 min-h-screen flex-col items-center justify-between p-24 before:absolute before:-z-10 before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-cover before:bg-hero-pattern font-light z-0 before:animate-hue-rotate animate-grayscale overflow-hidden before:pointer-events-none">
+      <main className="flex sticky top-0 min-h-screen flex-col items-center justify-between p-24 before:absolute before:-z-10 before:top-0 before:left-0 before:right-0 before:bottom-0 before:bg-cover before:bg-hero-pattern font-light z-0 before:animate-hue-rotate animate-grayscale overflow-hidden before:pointer-events-none text-gray-900">
         <VideoPlayer />
         <nav className="flex relative z-10 w-full max-w-5xl items-center justify-between flex-col gap-y-2 md:flex-row md:gap-y-0">
           <h1 className="font-bold text-2xl">L[ST]</h1>
